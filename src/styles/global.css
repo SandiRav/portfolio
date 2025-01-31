@@ -1,0 +1,74 @@
+@layer global {
+  /* Extend base styles / Tailwind normalize */
+  :root {
+    --header-height: 4rem;
+
+    @media (width >= 1024px) {
+      --header-height: 4.5rem;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-weight: 300;
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  select,
+  input:where([type="checkbox"], [type="radio"]) {
+    cursor: pointer;
+  }
+
+  svg {
+    height: auto;
+  }
+
+  strong,
+  b {
+    font-weight: 500;
+    font-size: inherit;
+  }
+
+  pre {
+    overflow: hidden;
+  }
+
+  /* Global Section styles */
+  /* constrained width and centered layout */
+  section {
+    margin-inline: auto;
+    max-width: 80rem;
+    width: 100%;
+    padding-inline: 1.25rem;
+
+    @media (width >= 100em) {
+      padding-inline: 0;
+    }
+
+    &[data-variant="full-bleed"] {
+      max-width: 100%;
+      /* no padding in full-bleed sections */
+      padding-inline: 0;
+    }
+  }
+}
