@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Environment variables
+.env
+
+# Logs and debugging
+logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+npm-debug.log*
+debug.log
+.next/cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Tailwind JIT cache
+.tailwind/
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js static cache
+.next/static/
+
+# Linting & Formatting
+.eslintcache
+.prettier.cache
+
