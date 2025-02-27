@@ -11,10 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          200: "#0077b6",
+        },
       },
       fontFamily: {
-        sans: 'var(--font-inter)', 
-      }
+        sans: "var(--font-inter)",
+      },
     },
   },
   plugins: [],
