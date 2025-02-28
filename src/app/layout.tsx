@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>
+      <body className="bg-white">
         <Header />
         <main>{children}</main>
         <Footer />
