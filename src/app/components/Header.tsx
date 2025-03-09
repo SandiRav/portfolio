@@ -58,31 +58,27 @@ const Header = () => {
 
         <div
           className={`
-            fixed inset-0 bg-white/70 h-full
+            fixed md:relative inset-0 bg-white/70 h-full w-full
             flex flex-col items-center justify-center
-            transition-all duration-300 ease-in-out
-            ${
-              showMenu
-                ? "opacity-100 visible"
-                : "opacity-0 invisible pointer-events-none"
-            }
+            transition-all duration-300 ease-in-out md:opacity-100 md:visible
+            ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"}
           `}
         >
-          <div className="bg-white transform transition-all duration-300 ease-in-out px-4 rounded-lg shadow-lg w-full h-full">
+          <div className="bg-white transform transition-all duration-300 ease-in-out px-4 rounded-lg shadow-lg md:shadow-none w-full h-full">
             <nav>
-              <ul className="flex flex-col md:flex-row mt-16 gap-y-4 divide-y divide-gray-300">
+              <ul className="flex flex-col md:flex-row md:justify-end mt-16 md:mt-0 gap-y-4 md:gap-x-8 divide-y divide-gray-300 md:divide-none">
                 <li>
                   <a
                     href="/"
                     className={`
                       text-gray-800 text-base
-                      transition-all relative mt-2 block w-full flex items-center justify-between
+                      transition-all relative mt-2 block w-full flex items-center justify-between text-primary-200
                       ${activePath === "/" ? "font-medium" : ""}
                     `}
                     onClick={() => setShowMenu(false)}
                   >
                     Home
-                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200" />
+                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200 md:hidden" />
                   </a>
                 </li>
                 <li>
@@ -90,13 +86,13 @@ const Header = () => {
                     href="/projects"
                     className={`
                       text-gray-800 text-base
-                      transition-all relative mt-2 block w-full flex items-center justify-between
+                      transition-all relative mt-2 block w-full flex items-center justify-between text-primary-200
                       ${activePath === "/projects" ? "font-medium" : ""}
                     `}
                     onClick={() => setShowMenu(false)}
                   >
                     Projects
-                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200" />
+                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200 md:hidden" />
                   </a>
                 </li>
                 <li>
@@ -104,13 +100,13 @@ const Header = () => {
                     href="/get-in-touch"
                     className={`
                       text-gray-800 text-base
-                      transition-all relative mt-2 block w-full flex items-center justify-between
+                      transition-all relative mt-2 block w-full flex items-center justify-between text-primary-200
                       ${activePath === "/get-in-touch" ? "font-medium" : ""}
                     `}
                     onClick={() => setShowMenu(false)}
                   >
                     Get in touch
-                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200" />
+                    <IconArrowRight className="w-5 h-5 shrink-0 text-primary-200 md:hidden" />
                   </a>
                 </li>
               </ul>
