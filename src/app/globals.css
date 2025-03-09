@@ -26,6 +26,8 @@ body {
   margin-right: auto;
   padding-left: 20px; /* Default padding */
   padding-right: 20px;
+  z-index: 50;
+  margin-top: 1rem;
 }
 
 /* Responsive Padding Adjustments */
