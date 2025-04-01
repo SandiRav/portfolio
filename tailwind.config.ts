@@ -9,11 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: {
           200: "#0077b6",
         },
+      },
+      maxWidth: {
+        40: "160px",
       },
       fontFamily: {
         sans: "var(--font-inter)",
