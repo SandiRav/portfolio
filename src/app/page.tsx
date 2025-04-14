@@ -1,53 +1,54 @@
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  const introParagraphs = [
+    "I'm a passionate developer focused on creating clean, user-centric solutions through code. With a strong foundation in frontend technologies, I enjoy crafting smooth, accessible, and responsive interfaces.",
+    "Driven by curiosity and creativity, I thrive on problem-solving and continuously learning to improve my work and deliver quality digital experiences.",
+    "Whether it’s building sleek portfolios or complex web apps, I aim to make the web a better place — one line of code at a time.",
+  ];
+
   return (
-    <div className="font-sans mt-20 container">
-      <section className="mt-32 md:flex md:flex-row-reverse">
-        <div className="md:basis-1/2">
-          <div className="h-64 w-64 mx-auto md:w-96 md:h-96">
+    <main className="font-sans mt-20 container">
+      <section className="mt-32 md:flex md:flex-row-reverse items-center">
+        {/* Profile Image */}
+        <div className="md:basis-1/2 flex justify-center">
+          <div className="h-64 w-64 md:h-96 md:w-96">
             <Image
               src="/assets/images/profile.jpg"
-              alt="Profile picture"
-              width={250}
-              height={250}
-              className="h-full w-full rounded-full"
+              alt="Portrait of Raveloarisoa Sandrinah"
+              width={280}
+              height={280}
+              className="rounded-full object-cover w-full h-full"
+              priority
             />
           </div>
         </div>
-        <div className="mb-24 flex flex-col justify-center items-center md:items-start md:basis-1/2">
-          <h1 className="text-lg md:text-5xl text-center md:text-left font-extrabold mt-4">
+
+        {/* Text Content */}
+        <div className="md:basis-1/2 flex flex-col justify-center items-center md:items-start px-4 mt-12 md:mt-0">
+          <h1 className="text-2xl md:text-5xl font-extrabold text-center md:text-left">
             Raveloarisoa Sandrinah
           </h1>
-          <div className="mx-auto md:max-w-full md:m-0 basis-1/2">
-            <p className="text-sm mt-4">
-              Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.
-            </p>
-            <p className="text-sm mt-4">
-              Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.
-            </p>
-            <p className="text-sm mt-4">
-              Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.
-            </p>
-            <div className="mt-8 md:mt-16">
-              <a
-                href="/contact"
-                className="self-start py-5 px-16 bg-primary-200 text-base text-white font-bold"
-              >
-                Let's get started
-              </a>
-            </div>
+          <div className="mt-6 space-y-4 text-sm md:text-base max-w-md">
+            {introParagraphs.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="mt-10">
+            <Link
+              href="/contact"
+              className="inline-block py-4 px-10 bg-primary-200 text-white font-semibold rounded-md transition-all hover:bg-primary-300 shadow-lg"
+            >
+              Let's get started
+            </Link>
           </div>
         </div>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 }

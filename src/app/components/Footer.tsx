@@ -1,63 +1,59 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-10">
       <div className="container">
         <h3 className="text-sm mb-5">Worked with</h3>
-        <ul className="grid grid-cols-2 gap-6 md:flex">
+        <ul className="grid grid-cols-2 gap-8 md:flex md:items-baseline pb-8">
           <li>
-            <a href="https://protectourwinters.uk/"></a>
-            <div className="border border-slate-200 py-5 px-9 w-full">
+            <Link href="https://protectourwinters.uk/">
               <Image
                 src="/assets/icons/protectourwinteruk.svg"
                 alt="Protect Our Winter UK"
-                width={80}
-                height={50}
+                width={160}
+                height={60}
               />
-            </div>
+            </Link>
           </li>
-          <li className=''>
-            <a href="https://www.whitespectre.com/">
-              <div className="border border-slate-200 py-5 px-9 w-full flex gap-x-6">
+          <li>
+            <Link href="https://www.whitespectre.com/">
+              <div className="flex items-baseline gap-x-4">
                 <Image
                   src="/assets/icons/whitespectre-icon.svg"
                   alt="Whitespectre Icon"
                   width={40}
                   height={30}
                 />
-                 <Image
+                <Image
                   src="/assets/icons/whitespectre-text.svg"
                   alt="whitespectre text"
                   width={160}
                   height={30}
                 />
               </div>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/whitespectre">
-              <div className="border border-slate-200 py-5 px-9 w-full">
-                <Image
-                  src="/assets/icons/protectourwinteruk.svg"
-                  alt="Protect Our Winter UK"
-                  width={80}
-                  height={50}
-                />
-              </div>
-            </a>
+            <Link href="https://allsafe24.com/">
+              <Image
+                src="/assets/icons/allsafe-logo.svg"
+                alt="Allsafe logo"
+                width={160}
+                height={60}
+              />
+            </Link>
           </li>
           <li>
-            <a href="/whitespectre">
-              <div className="border border-slate-200 py-5 px-9 w-full">
-                <Image
-                  src="/assets/icons/protectourwinteruk.svg"
-                  alt="Protect Our Winter UK"
-                  width={80}
-                  height={50}
-                />
-              </div>
-            </a>
+            <Link href="https://ecogyenergy.com/">
+              <Image
+                src="/assets/icons/ecogy-energy-logo-01.png"
+                alt="Ecogy Energy"
+                width={160}
+                height={60}
+              />
+            </Link>
           </li>
         </ul>
       </div>

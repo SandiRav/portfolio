@@ -1,5 +1,3 @@
-import type { Config } from "tailwindcss";
-
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,13 +11,15 @@ export default {
           200: "#0077b6",
         },
       },
-      maxWidth: {
-        40: "160px",
+      spacing: {
+        10: "2.5rem",
+        16: "4rem",
       },
+
       fontFamily: {
         sans: "var(--font-inter)",
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: ["prettier-plugin-tailwindcss"],
+};
