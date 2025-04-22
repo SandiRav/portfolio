@@ -4,11 +4,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="mt-10">
-      <div className="max-w-screen-xl mx-auto px-5 z-50 mt-4 md:px-0">
-        <h3 className="text-sm text-lime-600 italic md:text-base">
+      <div className="z-50 mx-auto mt-4 max-w-screen-xl px-5 md:px-0">
+        <h3 className="text-sm italic text-lime-600 md:text-base">
           Worked with
         </h3>
-        <ul className="grid grid-cols-2 gap-8 md:flex md:items-baseline pb-8">
+        <ul className="grid grid-cols-2 gap-8 pb-8 md:flex md:items-baseline">
           <li>
             <Link href="https://protectourwinters.uk/">
               <Image

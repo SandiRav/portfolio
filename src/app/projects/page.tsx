@@ -11,12 +11,12 @@ const ProjectsList = async () => {
   const projects = await res.json();
 
   return (
-    <div className="font-sans mt-16">
-      <div className="max-w-screen-lg mx-auto px-5 z-50 mt-4 lg:px-0">
-        <h1 className="text-2xl md:text-5xl text-lime-600 font-semibold">
+    <div className="mt-16 font-sans">
+      <div className="z-50 mx-auto mt-4 max-w-screen-lg px-5 lg:px-0">
+        <h1 className="text-2xl font-semibold text-lime-600 md:text-5xl">
           Projects
         </h1>
-        <p className="mt-5 md:mt-6 text-base text-slate-900 md:max-w-xl">
+        <p className="mt-5 text-base text-slate-900 md:mt-6 md:max-w-xl">
           Solving user & business problems since last 15+ years.Lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua.
@@ -24,42 +24,42 @@ const ProjectsList = async () => {
         <div className="my-16 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-8">
           {projects.map((project: Project) => {
             return (
-              <div key={project.id} className="h-full w-full flex flex-col">
+              <div key={project.id} className="flex h-full w-full flex-col">
                 <div className="h-96">
                   <Image
                     src={project.img}
                     width={445}
                     height={300}
                     alt={project.imageAltText}
-                    className="rounded-lg object-cover h-full w-full"
+                    className="h-full w-full rounded-lg object-cover"
                   />
                 </div>
-                <div className="flex flex-col flex-grow mt-5">
-                  <h3 className="text-xl text-lime-600 font-semibold">
+                <div className="mt-5 flex flex-grow flex-col">
+                  <h3 className="text-xl font-semibold text-lime-600">
                     {project.title}
                   </h3>
-                  <p className="my-4 text-base text-slate-900 flex-grow">
+                  <p className="my-4 flex-grow text-base text-slate-900">
                     {project.description}
                   </p>
                   <div className="mb-2">
                     <span className="font-medium">Technologies:</span>
-                    <div className="flex flex-wrap gap-2 mt-1">
+                    <div className="mt-1 flex flex-wrap gap-2">
                       {project.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="text-lime-600 bg-lime-50 px-2 py-1 rounded text-sm"
+                          className="rounded bg-lime-50 px-2 py-1 text-sm text-lime-600"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
                   </div>
-                  <div className="flex gap-x-8 mt-auto pt-2">
+                  <div className="mt-auto flex gap-x-8 pt-2">
                     <span className="flex items-center gap-2">
                       <Link href={project.demo} target="_blank" rel="noopner">
                         <small>Demo</small>
                         <IconExternalLink
-                          className="w-5 h-5 text-slate-900"
+                          className="h-5 w-5 text-slate-900"
                           stroke={1.5}
                         />
                       </Link>
@@ -68,7 +68,7 @@ const ProjectsList = async () => {
                       <Link href={project.source} target="_blank" rel="noopner">
                         <small>Code</small>
                         <IconBrandGithub
-                          className="w-5 h-5 text-slate-900"
+                          className="h-5 w-5 text-slate-900"
                           stroke={1.5}
                         />
                       </Link>

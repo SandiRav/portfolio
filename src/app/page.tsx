@@ -10,26 +10,26 @@ export default function Home() {
   ];
 
   return (
-    <main className="font-sans mt-16 max-w-screen-lg mx-auto px-5 z-50 mt-4 lg:px-0">
-      <section className="mt-32 md:flex md:flex-row-reverse items-center">
-        <div className="md:basis-1/2 flex justify-center">
+    <main className="z-50 mx-auto mt-16 mt-4 max-w-screen-lg px-5 font-sans lg:px-0">
+      <section className="mt-32 items-center md:flex md:flex-row-reverse">
+        <div className="flex justify-center md:basis-1/2">
           <div className="h-64 w-64 md:h-96 md:w-96">
             <Image
               src="/assets/images/profile.jpg"
               alt="Portrait of Raveloarisoa Sandrinah"
               width={280}
               height={280}
-              className="rounded-full object-cover w-full h-full"
+              className="h-full w-full rounded-full object-cover"
               priority
             />
           </div>
         </div>
 
-        <div className="md:basis-1/2 flex flex-col justify-center items-center md:items-start px-4 mt-12 md:mt-0">
-          <h1 className="text-2xl md:text-5xl text-lime-600 font-extrabold text-center md:text-left">
+        <div className="mt-12 flex flex-col items-center justify-center px-4 md:mt-0 md:basis-1/2 md:items-start">
+          <h1 className="text-center text-2xl font-extrabold text-lime-600 md:text-left md:text-5xl">
             Raveloarisoa Sandrinah
           </h1>
-          <div className="mt-6 space-y-4 text-sm md:text-base max-w-md">
+          <div className="mt-6 max-w-md space-y-4 text-sm md:text-base">
             {introParagraphs.map((text, index) => (
               <p className="text-base text-slate-900" key={index}>
                 {text}
@@ -40,7 +40,7 @@ export default function Home() {
           <div className="mt-10">
             <Link
               href="/contact"
-              className="inline-block py-4 px-10 bg-lime-600 text-white font-semibold rounded-md transition-all hover:bg-primary-300 shadow-lg"
+              className="hover:bg-primary-300 inline-block rounded-md bg-lime-600 px-10 py-4 font-semibold text-white shadow-lg transition-all"
             >
               Let's get started
             </Link>

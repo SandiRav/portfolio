@@ -1,16 +1,16 @@
 export default function Contact() {
   return (
-    <div className="max-w-screen-lg mx-auto px-5 z-50 mt-16 lg:px-0">
-      <h1 className="text-2xl md:text-5xl text-lime-600 font-semibold md:text-center">
+    <div className="z-50 mx-auto mt-16 max-w-screen-lg px-5 lg:px-0">
+      <h1 className="text-2xl font-semibold text-lime-600 md:text-center md:text-5xl">
         Get In Touch
       </h1>
-      <p className="mt-5 md:mt-6 text-base text-slate-900 md:max-w-xl md:mx-auto md:text-center">
+      <p className="mt-5 text-base text-slate-900 md:mx-auto md:mt-6 md:max-w-xl md:text-center">
         I'm always excited to collaborate on new and meaningful projects.
         Whether you have a question, a project idea, or just want to say hi —
         feel free to reach out using the form below. I'll get back to you as
         soon as possible!
       </p>
-      <div className="mt-10 md:max-w-sm md:mx-auto">
+      <div className="mt-10 md:mx-auto md:max-w-sm">
         <form action="/contact" method="POST">
           <fieldset className="flex flex-col gap-y-5">
             <div className="flex flex-col gap-y-1">
@@ -23,7 +23,7 @@ export default function Contact() {
                 name="email"
                 placeholder="Please enter your email"
                 required
-                className="text-base text-slate-900 p-3 border border-slate-200 focus:outline focus:outline-2 focus:outline-lime-500 rounded-sm"
+                className="rounded-sm border border-slate-200 p-3 text-base text-slate-900 focus:outline focus:outline-2 focus:outline-lime-500"
               />
             </div>
             <div className="flex flex-col gap-y-1">
@@ -36,7 +36,7 @@ export default function Contact() {
                 name="phone"
                 pattern="[0-9]{10,15}"
                 placeholder="Enter mobile"
-                className="text-base text-slate-900 p-3 border border-slate-200 focus:outline focus:outline-2 focus:outline-lime-500 rounded-sm"
+                className="rounded-sm border border-slate-200 p-3 text-base text-slate-900 focus:outline focus:outline-2 focus:outline-lime-500"
               />
             </div>
             <div className="flex flex-col gap-y-1">
@@ -49,13 +49,13 @@ export default function Contact() {
                 rows={5}
                 placeholder="Enter your message"
                 required
-                className="text-base text-slate-900 p-3 border border-slate-200 focus:outline focus:outline-2 focus:outline-lime-500 rounded-sm"
+                className="rounded-sm border border-slate-200 p-3 text-base text-slate-900 focus:outline focus:outline-2 focus:outline-lime-500"
               />
             </div>
             <div>
               <button
                 type="submit"
-                className="w-full inline-block py-4 px-10 bg-lime-600 text-white font-semibold rounded-md transition-all hover:bg-primary-300 shadow-lg"
+                className="hover:bg-primary-300 inline-block w-full rounded-md bg-lime-600 px-10 py-4 font-semibold text-white shadow-lg transition-all"
               >
                 Submit
               </button>
