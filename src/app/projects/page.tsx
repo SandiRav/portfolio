@@ -12,7 +12,7 @@ const ProjectsList = async () => {
 
   return (
     <div className="font-sans mt-16">
-      <div className="max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0">
+      <div className="max-w-screen-lg mx-auto px-5 z-50 mt-4 lg:px-0">
         <h1 className="text-2xl md:text-5xl text-lime-600 font-semibold">
           Projects
         </h1>

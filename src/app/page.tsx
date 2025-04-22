@@ -10,7 +10,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="font-sans mt-16 max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0">
+    <main className="font-sans mt-16 max-w-screen-lg mx-auto px-5 z-50 mt-4 lg:px-0">
       <section className="mt-32 md:flex md:flex-row-reverse items-center">
         <div className="md:basis-1/2 flex justify-center">
           <div className="h-64 w-64 md:h-96 md:w-96">

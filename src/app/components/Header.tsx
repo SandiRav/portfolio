@@ -12,7 +12,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0 bg-lime-600">
+    <header className="max-w-screen-lg mx-auto px-5 z-50 mt-4 lg:px-0 bg-lime-600">
       <nav className="py-6">
         <ul className="flex justify-center gap-y-4 gap-x-8 flex-wrap">
           {navItems.map(({ href, label }) => (
