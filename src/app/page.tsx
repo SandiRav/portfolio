@@ -10,9 +10,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="font-sans mt-20 container">
+    <main className="font-sans mt-16 max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0">
       <section className="mt-32 md:flex md:flex-row-reverse items-center">
-        {/* Profile Image */}
         <div className="md:basis-1/2 flex justify-center">
           <div className="h-64 w-64 md:h-96 md:w-96">
             <Image
@@ -26,7 +25,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Text Content */}
         <div className="md:basis-1/2 flex flex-col justify-center items-center md:items-start px-4 mt-12 md:mt-0">
           <h1 className="text-2xl md:text-5xl text-lime-600 font-extrabold text-center md:text-left">
             Raveloarisoa Sandrinah
@@ -39,7 +37,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="mt-10">
             <Link
               href="/contact"

@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="mt-10">
-      <div className="container">
+      <div className="max-w-screen-xl mx-auto px-5 z-50 mt-4 md:px-0">
         <h3 className="text-sm text-lime-600 italic md:text-base">
           Worked with
         </h3>

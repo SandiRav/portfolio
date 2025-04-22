@@ -65,12 +65,12 @@ const ProjectsList = () => {
     },
   ];
   return (
-    <div className="font-sans mt-20">
-      <div className="container">
-        <h1 className="text-center text-2xl md:text-5xl text-lime-600 font-semibold">
+    <div className="font-sans mt-16">
+      <div className="max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0">
+        <h1 className="text-2xl md:text-5xl text-lime-600 font-semibold">
           Projects
         </h1>
-        <p className="mt-5 md:mt-6 text-base text-slate-900 md:max-w-xl md:mx-auto">
+        <p className="mt-5 md:mt-6 text-base text-slate-900 md:max-w-xl">
           Solving user & business problems since last 15+ years.Lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua.

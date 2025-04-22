@@ -12,14 +12,14 @@ const Header = () => {
   ];
 
   return (
-    <header className="container">
-      <nav>
-        <ul className="flex justify-center mt-16 gap-y-4 gap-x-8 flex-wrap">
+    <header className="max-w-screen-xl mx-auto px-5 z-50 mt-4 lg:px-0 bg-lime-600">
+      <nav className="py-6">
+        <ul className="flex justify-center gap-y-4 gap-x-8 flex-wrap">
           {navItems.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`text-gray-800 text-base transition-all relative mt-2 block w-full flex items-center justify-between text-primary-200 ${
+                className={`text-white text-base transition-all relative mt-2 block w-full flex items-center justify-between text-primary-200 ${
                   pathname === href ? "font-semibold underline" : "font-normal"
                 }`}
               >
