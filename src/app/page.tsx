@@ -39,7 +39,7 @@ export default function Home() {
 
           <div className="mt-10">
             <Link
-              href="/contact"
+              href="/get-in-touch"
               className="hover:bg-primary-300 inline-block rounded-md bg-lime-600 px-10 py-4 font-semibold text-white shadow-lg transition-all"
             >
               Let's get started
