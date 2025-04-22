@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer className="mt-10">
       <div className="container">
-        <h3 className="text-sm mb-5">Worked with</h3>
+        <h3 className="text-sm text-lime-600 italic md:text-base">
+          Worked with
+        </h3>
         <ul className="grid grid-cols-2 gap-8 md:flex md:items-baseline pb-8">
           <li>
             <Link href="https://protectourwinters.uk/">

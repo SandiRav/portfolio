@@ -14,6 +14,8 @@ export default {
       spacing: {
         10: "2.5rem",
         16: "4rem",
+        64: "16rem",
+        96: "24rem",
       },
 
       fontFamily: {

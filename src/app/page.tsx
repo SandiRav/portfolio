@@ -28,12 +28,14 @@ export default function Home() {
 
         {/* Text Content */}
         <div className="md:basis-1/2 flex flex-col justify-center items-center md:items-start px-4 mt-12 md:mt-0">
-          <h1 className="text-2xl md:text-5xl font-extrabold text-center md:text-left">
+          <h1 className="text-2xl md:text-5xl text-lime-600 font-extrabold text-center md:text-left">
             Raveloarisoa Sandrinah
           </h1>
           <div className="mt-6 space-y-4 text-sm md:text-base max-w-md">
             {introParagraphs.map((text, index) => (
-              <p key={index}>{text}</p>
+              <p className="text-base text-slate-900" key={index}>
+                {text}
+              </p>
             ))}
           </div>
 
@@ -41,7 +43,7 @@ export default function Home() {
           <div className="mt-10">
             <Link
               href="/contact"
-              className="inline-block py-4 px-10 bg-primary-200 text-white font-semibold rounded-md transition-all hover:bg-primary-300 shadow-lg"
+              className="inline-block py-4 px-10 bg-lime-600 text-white font-semibold rounded-md transition-all hover:bg-primary-300 shadow-lg"
             >
               Let's get started
             </Link>
