@@ -5,9 +5,9 @@ export default function Contact() {
         Get In Touch
       </h1>
       <p className="mt-5 text-base text-slate-900 md:mx-auto md:mt-6 md:max-w-xl md:text-center">
-        I'm always excited to collaborate on new and meaningful projects.
+        I am always excited to collaborate on new and meaningful projects.
         Whether you have a question, a project idea, or just want to say hi —
-        feel free to reach out using the form below. I'll get back to you as
+        feel free to reach out using the form below. I will get back to you as
         soon as possible!
       </p>
       <div className="mt-10 md:mx-auto md:max-w-sm">

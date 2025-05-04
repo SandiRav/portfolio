@@ -6,7 +6,7 @@ export default function Home() {
   const introParagraphs = [
     "I'm a passionate developer focused on creating clean, user-centric solutions through code. With a strong foundation in frontend technologies, I enjoy crafting smooth, accessible, and responsive interfaces.",
     "Driven by curiosity and creativity, I thrive on problem-solving and continuously learning to improve my work and deliver quality digital experiences.",
-    "Whether it’s building sleek portfolios or complex web apps, I aim to make the web a better place — one line of code at a time.",
+    "Whether it's building sleek portfolios or complex web apps, I aim to make the web a better place — one line of code at a time.",
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function Home() {
               href="/get-in-touch"
               className="hover:bg-primary-300 inline-block rounded-md bg-lime-600 px-10 py-4 font-semibold text-white shadow-lg transition-all"
             >
-              Let's get started
+              Get started
             </Link>
           </div>
         </div>

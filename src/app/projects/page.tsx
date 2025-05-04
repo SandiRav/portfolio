@@ -17,9 +17,10 @@ const ProjectsList = async () => {
           Projects
         </h1>
         <p className="mt-5 text-base text-slate-900 md:mt-6 md:max-w-xl">
-          Solving user & business problems since last 15+ years.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          With 4 years of experience as a frontend developer, I focus on
+          creating intuitive, responsive, and maintainable user interfaces. Here
+          are a few pages and components I have built to demonstrate my approach
+          to clean design, reusable code, and modern web practices.
         </p>
         <div className="my-16 flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-8">
           {projects.map((project: Project) => {
