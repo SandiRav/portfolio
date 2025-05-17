@@ -17,7 +17,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
     children,
     className,
   }) => {
-    return <div className={className}>{children}</div>;
+    return <section className={className}>{children}</section>;
   };
 
   return (
