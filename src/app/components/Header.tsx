@@ -1,35 +1,160 @@
 "use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  IconBrandFacebookFilled,
+  IconBrandGithubFilled,
+  IconBrandLinkedinFilled,
+  IconMenu2,
+  IconX,
+} from "@tabler/icons-react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/get-in-touch", label: "Get in touch" },
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/get-in-touch" },
   ];
 
+  const navbarVariants = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <header className="z-50 mx-auto mt-4 max-w-screen-lg bg-lime-600 px-5 lg:px-0">
-      <nav className="py-6">
-        <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-          {navItems.map(({ href, label }) => (
-            <li key={href}>
+    <>
+      <motion.header
+        className="bg-primary-300 relative z-10 shadow-lg"
+        initial="initial"
+        animate="animate"
+        variants={navbarVariants}
+      >
+        <div className="flex items-center justify-between px-5 py-6">
+          <div className="hidden items-center space-x-8 md:flex">
+            {navLinks.map((link) => (
               <Link
-                href={href}
-                className={`relative mt-2 block flex w-full items-center justify-between text-base text-primary-200 text-white transition-all ${
-                  pathname === href ? "font-semibold underline" : "font-normal"
-                }`}
+                key={link.path}
+                href={link.path}
+                className={`relative font-semibold ${
+                  pathname === link.path
+                    ? "text-secondary-100 font-semibold"
+                    : "hover:text-secondary-100 text-gray-600"
+                } transition-colors duration-300`}
               >
-                {label}
+                {link.name}
+                {pathname === link.path && (
+                  <motion.span
+                    className="bg-secondary-100 absolute bottom-0 left-0 h-0.5 w-full"
+                    layoutId="navbar-underline"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
               </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+            ))}
+          </div>
+
+          <Link
+            href="/"
+            className="text-3xl font-light tracking-tight text-gray-900 md:order-first"
+          >
+            SANDY
+          </Link>
+
+          <div className="flex gap-x-5">
+            <div className="flex justify-center gap-x-5">
+              <Link
+                href="https://twitter.com"
+                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
+              >
+                <IconBrandFacebookFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+              </Link>
+              <Link
+                href="https://twitter.com"
+                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
+              >
+                <IconBrandGithubFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+              </Link>
+              <Link
+                href="https://twitter.com"
+                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
+              >
+                <IconBrandLinkedinFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+              </Link>
+            </div>
+
+            <button
+              className="focus:outline-none md:hidden"
+              onClick={() => setIsOpen(true)}
+              aria-label="Toggle menu"
+            >
+              <IconMenu2
+                stroke={1}
+                className="size-8 shrink-0 text-gray-700/50"
+              />
+            </button>
+          </div>
+        </div>
+      </motion.header>
+
+      {/* Mobile menu overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Background overlay */}
+            <motion.div
+              className="fixed inset-0 z-40 flex flex-col justify-center gap-y-6 bg-black/70 p-5 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            >
+              {/* Mobile Navigation Menu */}
+              <button
+                className="self-end focus:outline-none"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
+              >
+                <IconX stroke={2} className="size-8 text-white" />
+              </button>
+              <motion.div
+                className="z-50 h-[90vh] w-full overflow-auto rounded-lg bg-white"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", duration: 0.4 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex flex-col px-5 py-8">
+                  <div className="flex flex-col space-y-6">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        href={link.path}
+                        className={`text-lg font-semibold ${
+                          pathname === link.path
+                            ? "text-secondary-100 font-semibold"
+                            : "hover:text-secondary-100 text-gray-600"
+                        } transition-colors duration-300`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
