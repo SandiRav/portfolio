@@ -19,8 +19,8 @@ const Header = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/get-in-touch" },
+    { name: "Work", path: "/work" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const navbarVariants = {
@@ -44,14 +44,14 @@ const Header = () => {
                 href={link.path}
                 className={`relative font-semibold ${
                   pathname === link.path
-                    ? "text-secondary-200 font-semibold"
-                    : "hover:text-secondary-200 text-gray-600"
+                    ? "font-semibold text-secondary-200"
+                    : "text-gray-600 hover:text-secondary-200"
                 } transition-colors duration-300`}
               >
                 {link.name}
                 {pathname === link.path && (
                   <motion.span
-                    className="bg-secondary-200 absolute bottom-0 left-0 h-0.5 w-full"
+                    className="absolute bottom-0 left-0 h-0.5 w-full bg-secondary-200"
                     layoutId="navbar-underline"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
@@ -70,13 +70,13 @@ const Header = () => {
           <div className="flex gap-x-5">
             <div className="flex items-center justify-center gap-x-5">
               <Link href="https://twitter.com">
-                <IconBrandFacebookFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
+                <IconBrandFacebookFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
               </Link>
               <Link href="https://twitter.com">
-                <IconBrandGithubFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
+                <IconBrandGithubFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
               </Link>
               <Link href="https://twitter.com">
-                <IconBrandLinkedinFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
+                <IconBrandLinkedinFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
               </Link>
             </div>
 
@@ -130,8 +130,8 @@ const Header = () => {
                         href={link.path}
                         className={`text-lg font-semibold ${
                           pathname === link.path
-                            ? "text-secondary-200 font-semibold"
-                            : "hover:text-secondary-200 text-gray-600"
+                            ? "font-semibold text-secondary-200"
+                            : "text-gray-600 hover:text-secondary-200"
                         } transition-colors duration-300`}
                         onClick={() => setIsOpen(false)}
                       >

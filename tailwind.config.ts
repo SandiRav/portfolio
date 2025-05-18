@@ -32,6 +32,7 @@ export default {
 
       boxShadow: {
         custom: "0px 0px 20px rgba(0, 0, 0, 0.1)",
+        "custom-hover": "0px 0px 30px rgba(0, 0, 0, 0.1)",
       },
 
       fontFamily: {

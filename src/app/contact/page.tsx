@@ -99,7 +99,7 @@ export default function Contact() {
                     id="name"
                     name="name"
                     pattern="[0-9]{10,15}"
-                    className="rounded-sm border border-slate-200 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
+                    className="rounded-sm border border-gray-300 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
                   />
                 </div>
                 <div className="col-span-1 flex flex-col gap-y-1">
@@ -111,7 +111,7 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    className="rounded-sm border border-slate-200 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
+                    className="rounded-sm border border-gray-300 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
                   />
                 </div>
                 <div className="col-span-2 flex flex-col gap-y-1">
@@ -123,7 +123,7 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     required
-                    className="rounded-sm border border-slate-200 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
+                    className="rounded-sm border border-gray-300 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
                   />
                 </div>
                 <div className="col-span-2 flex flex-col gap-y-1">
@@ -135,7 +135,7 @@ export default function Contact() {
                     name="message"
                     rows={10}
                     required
-                    className="rounded-sm border border-slate-200 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
+                    className="rounded-sm border border-gray-300 px-4 py-3 text-base text-slate-900 focus:outline focus:outline-1 focus:outline-secondary-200"
                   />
                 </div>
               </fieldset>
