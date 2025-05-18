@@ -1,3 +1,4 @@
+import React from "react";
 import FadeInWhenVisible from "./animation/FadeInWhenVisible";
 
 interface AnimatedSectionProps {
@@ -13,10 +14,10 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   delay = 0,
   direction = "up",
 }) => {
-  const Component: React.FC<{ children: any; className: string }> = ({
-    children,
-    className,
-  }) => {
+  const Component: React.FC<{
+    children: React.ReactNode;
+    className: string;
+  }> = ({ children, className }) => {
     return <section className={className}>{children}</section>;
   };
 

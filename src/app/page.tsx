@@ -7,11 +7,11 @@ export default function Home() {
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">Arisoa Sandrinah</h1>
           <p className="text-md mb-8 mt-2 text-gray-600">
-            I'm a software developer from Madagascar
+            I am a software developer from Madagascar
           </p>
           <Link
             href="/about"
-            className="text-semibold bg-secondary-200 rounded-custom-50 px-10 py-3 text-sm uppercase text-white"
+            className="text-semibold rounded-custom-50 bg-secondary-200 px-10 py-3 text-sm uppercase text-white"
           >
             About Me
           </Link>

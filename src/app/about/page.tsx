@@ -6,11 +6,11 @@ import { ProgressBar } from "../components/ProgresBar";
 
 export default function Home() {
   return (
-    <main className="sm:max-w-136 lg:max-w-240 px-5 font-sans sm:mx-auto xl:max-w-screen-xl">
+    <main className="px-5 font-sans sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
       <AnimatedSection>
         <div className="pb-16 pt-12 lg:pt-16">
           <div className="flex flex-col items-center gap-y-5 pb-14">
-            <h1 className="after:bg-secondary-200 relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:content-['']">
+            <h1 className="relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:bg-secondary-200 after:content-['']">
               About
             </h1>
             <p className="text-center text-slate-900">
@@ -35,7 +35,7 @@ export default function Home() {
                 Web Developer
               </h2>
               <p className="py-3 italic text-gray-600">
-                I'm a software developer specializing in frontend development,
+                I am a software developer specializing in frontend development,
                 building user-friendly interfaces for web and mobile apps. I
                 focus on creating clean, responsive, and accessible designs that
                 provide a smooth user experience.
@@ -101,7 +101,7 @@ export default function Home() {
       </AnimatedSection>
       <AnimatedSection className="py-12 lg:py-16">
         <div className="flex flex-col items-center gap-y-5 pb-12 pb-14">
-          <h1 className="after:bg-secondary-200 relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:content-['']">
+          <h1 className="relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:bg-secondary-200 after:content-['']">
             Skills
           </h1>
           <p className="text-center text-slate-900 lg:max-w-3xl">
