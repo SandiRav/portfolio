@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <>
       <motion.header
-        className="bg-primary-300 relative z-10 shadow-lg"
+        className="relative z-10 bg-primary-300 shadow-md"
         initial="initial"
         animate="animate"
         variants={navbarVariants}
@@ -44,14 +44,14 @@ const Header = () => {
                 href={link.path}
                 className={`relative font-semibold ${
                   pathname === link.path
-                    ? "text-secondary-100 font-semibold"
-                    : "hover:text-secondary-100 text-gray-600"
+                    ? "text-secondary-200 font-semibold"
+                    : "hover:text-secondary-200 text-gray-600"
                 } transition-colors duration-300`}
               >
                 {link.name}
                 {pathname === link.path && (
                   <motion.span
-                    className="bg-secondary-100 absolute bottom-0 left-0 h-0.5 w-full"
+                    className="bg-secondary-200 absolute bottom-0 left-0 h-0.5 w-full"
                     layoutId="navbar-underline"
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
@@ -68,24 +68,15 @@ const Header = () => {
           </Link>
 
           <div className="flex gap-x-5">
-            <div className="flex justify-center gap-x-5">
-              <Link
-                href="https://twitter.com"
-                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
-              >
-                <IconBrandFacebookFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+            <div className="flex items-center justify-center gap-x-5">
+              <Link href="https://twitter.com">
+                <IconBrandFacebookFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
               </Link>
-              <Link
-                href="https://twitter.com"
-                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
-              >
-                <IconBrandGithubFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+              <Link href="https://twitter.com">
+                <IconBrandGithubFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
               </Link>
-              <Link
-                href="https://twitter.com"
-                className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
-              >
-                <IconBrandLinkedinFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+              <Link href="https://twitter.com">
+                <IconBrandLinkedinFilled className="hover:text-secondary-200 size-6 shrink-0 text-gray-700/50" />
               </Link>
             </div>
 
@@ -139,8 +130,8 @@ const Header = () => {
                         href={link.path}
                         className={`text-lg font-semibold ${
                           pathname === link.path
-                            ? "text-secondary-100 font-semibold"
-                            : "hover:text-secondary-100 text-gray-600"
+                            ? "text-secondary-200 font-semibold"
+                            : "hover:text-secondary-200 text-gray-600"
                         } transition-colors duration-300`}
                         onClick={() => setIsOpen(false)}
                       >

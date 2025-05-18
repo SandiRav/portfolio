@@ -11,7 +11,7 @@ export default function Home() {
           </p>
           <Link
             href="/about"
-            className="rounded-custom-50 text-semibold bg-secondary-100 px-10 py-3 text-sm uppercase text-white"
+            className="text-semibold bg-secondary-200 rounded-custom-50 px-10 py-3 text-sm uppercase text-white"
           >
             About Me
           </Link>

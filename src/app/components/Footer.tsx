@@ -22,19 +22,19 @@ export const Footer = () => {
           href="https://twitter.com"
           className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
         >
-          <IconBrandFacebookFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+          <IconBrandFacebookFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
         </Link>
         <Link
           href="https://twitter.com"
           className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
         >
-          <IconBrandGithubFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+          <IconBrandGithubFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
         </Link>
         <Link
           href="https://twitter.com"
           className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
         >
-          <IconBrandLinkedinFilled className="hover:text-secondary-100 h-6 w-4 shrink-0 text-gray-700/50" />
+          <IconBrandLinkedinFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
         </Link>
       </div>
     </footer>
