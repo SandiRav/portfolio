@@ -12,24 +12,26 @@ const ProjectsList = async () => {
 
   return (
     <AnimatedSection>
-      <main className="px-5 py-16 font-sans sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
+      <main className="px-5 py-16 sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
         <div className="flex flex-col items-center gap-y-5 pb-14">
           <h1 className="relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:bg-secondary-200 after:content-['']">
             Projects
           </h1>
           <p className="text-center text-slate-900 lg:max-w-3xl">
-            Here are a few pages and components I have built to demonstrate my
-            approach to clean design, reusable code, and modern web practices.
+            Here are a few client projects and contributions where I helped
+            implement responsive UI, modern frontend architecture, and
+            internationalization features, using tools like React, Tailwind CSS,
+            and Svelte.
           </p>
         </div>
-        <div className="flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-8 xl:grid-cols-3">
+        <div className="flex flex-col gap-y-10 md:grid md:grid-cols-2 md:gap-x-8">
           {projects.map((project: Project) => {
             return (
               <Link
                 href={project.demo}
                 key={project.id}
                 target="_blank"
-                className="hover:shadow-custom-hover bg-white p-5 shadow-custom transition duration-300 ease-in-out hover:scale-105"
+                className="bg-white p-5 shadow-custom transition duration-300 ease-in-out hover:scale-105 hover:shadow-custom-hover"
               >
                 <AnimatedSection>
                   <div className="flex h-full w-full flex-col">
@@ -43,10 +45,10 @@ const ProjectsList = async () => {
                       />
                     </div>
                     <div className="mt-5 flex flex-grow flex-col">
-                      <h3 className="text-center text-2xl font-semibold text-gray-900">
+                      <h3 className="text-center text-lg font-semibold text-gray-900 sm:text-xl">
                         {project.title}
                       </h3>
-                      <p className="my-4 text-center text-sm text-gray-900">
+                      <p className="my-4 text-sm text-gray-900">
                         {project.description}
                       </p>
                       <div className="mt-1 flex flex-wrap justify-center gap-2">

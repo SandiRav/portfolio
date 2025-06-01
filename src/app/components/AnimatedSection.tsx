@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import FadeInWhenVisible from "./animation/FadeInWhenVisible";
 
 interface AnimatedSectionProps {
@@ -6,6 +6,7 @@ interface AnimatedSectionProps {
   delay?: number;
   direction?: string;
   className?: string;
+  disableAnimation?: boolean;
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({
@@ -13,21 +14,19 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   className = "",
   delay = 0,
   direction = "up",
+  disableAnimation = false,
 }) => {
-  const Component: React.FC<{
-    children: React.ReactNode;
-    className: string;
-  }> = ({ children, className }) => {
+  if (disableAnimation) {
     return <section className={className}>{children}</section>;
-  };
+  }
 
   return (
-    <Component className={`${className}`}>
+    <section className={className}>
       <FadeInWhenVisible delay={delay} direction={direction}>
         {children}
       </FadeInWhenVisible>
-    </Component>
+    </section>
   );
 };
 
-export default AnimatedSection;
+export default memo(AnimatedSection);

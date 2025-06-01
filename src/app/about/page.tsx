@@ -1,25 +1,42 @@
 import Image from "next/image";
-import Link from "next/link";
 import AnimatedSection from "../components/AnimatedSection";
 import { IconArrowBadgeRightFilled } from "@tabler/icons-react";
-import { ProgressBar } from "../components/ProgresBar";
 
 export default function Home() {
+  const skills = [
+    "HTML",
+    "CSS",
+    "SASS",
+    "Tailwind CSS",
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Next.js",
+    "Svelte.js",
+    "Astro.js",
+    "Node.js",
+    "Express.js",
+    "React Native",
+    "MongoDB",
+    "REST API",
+    "Git",
+    "Stripe API",
+    "Figma",
+  ];
   return (
-    <main className="px-5 font-sans sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
+    <main className="px-5 sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
       <AnimatedSection>
         <div className="pb-16 pt-12 lg:pt-16">
-          <div className="flex flex-col items-center gap-y-5 pb-14">
+          <div className="flex flex-col items-center gap-y-5 pb-8">
             <h1 className="relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:bg-secondary-200 after:content-['']">
-              About
+              About Me
             </h1>
             <p className="text-center text-slate-900">
-              His needs result from something, an escape, and he is indeed of a
-              nature that is sincere and consistent.
+              Here is a bit about me—feel free to connect!
             </p>
           </div>
           <div className="lg:flex lg:gap-x-8">
-            <div className="shrink-0 lg:h-80 lg:w-80">
+            <div className="lg:w-88 shrink-0 lg:h-80">
               <Image
                 src="/assets/images/profile.jpg"
                 alt="Portrait of Raveloarisoa Sandrinah"
@@ -30,31 +47,20 @@ export default function Home() {
               />
             </div>
 
-            <div className="mt-4 lg:mt-0 lg:w-4/6">
+            <div className="mt-4 lg:mt-0 lg:w-2/3">
               <h2 className="mb-1 text-center text-xl font-bold text-gray-900 lg:text-left">
                 Web Developer
               </h2>
-              <p className="py-3 italic text-gray-600">
-                I am a software developer specializing in frontend development,
-                building user-friendly interfaces for web and mobile apps. I
-                focus on creating clean, responsive, and accessible designs that
-                provide a smooth user experience.
+              <p className="pb-4 pt-3 italic text-gray-600">
+                <q>
+                  Besides my passion for software development, I enjoy exploring
+                  beautiful views, trying out new recipes in the kitchen, and
+                  immersing myself in good music. These hobbies help me relax
+                  and stay inspired.
+                </q>
               </p>
               <div>
                 <ul className="mb-5 flex flex-col gap-y-5">
-                  <li className="flex items-center">
-                    <IconArrowBadgeRightFilled className="text-secondary-200" />
-                    <span className="ml-1 mr-2 font-semibold text-gray-900">
-                      Age:
-                    </span>
-                    <Link
-                      href="mailto:ainavoniarisoa@gmail.com"
-                      target="_blank"
-                      className="text-gray-600"
-                    >
-                      24
-                    </Link>
-                  </li>
                   <li className="flex items-center">
                     <IconArrowBadgeRightFilled className="text-secondary-200" />
                     <span className="ml-1 mr-2 font-semibold text-gray-900">
@@ -67,7 +73,7 @@ export default function Home() {
                   <li className="flex items-center">
                     <IconArrowBadgeRightFilled className="text-secondary-200" />
                     <span className="ml-1 mr-2 font-semibold text-gray-900">
-                      Phone:
+                      WhatsApp:
                     </span>
                     <span className="text-gray-600">+261384543837</span>
                   </li>
@@ -81,19 +87,11 @@ export default function Home() {
                   <li className="flex items-center">
                     <IconArrowBadgeRightFilled className="text-secondary-200" />
                     <span className="ml-1 mr-2 font-semibold text-gray-900">
-                      Freelance:
+                      Remote:
                     </span>
-                    <span className="text-gray-600">Available</span>
+                    <span className="text-gray-600">Open</span>
                   </li>
                 </ul>
-              </div>
-              <div>
-                <p className="py-3 text-gray-900">
-                  Responsibilities are chosen with purpose, balancing effort and
-                  reward. Anyone can achieve greatness. No hardship endures
-                  forever. Integrity defines actions, and true commitment repels
-                  falsehood.
-                </p>
               </div>
             </div>
           </div>
@@ -102,26 +100,18 @@ export default function Home() {
       <AnimatedSection className="py-12 lg:py-16">
         <div className="flex flex-col items-center gap-y-5 pb-12 pb-14">
           <h1 className="relative inline-block pb-5 text-3xl font-bold text-gray-900 after:absolute after:bottom-0 after:left-0 after:right-0 after:m-auto after:block after:h-1 after:w-12 after:bg-secondary-200 after:content-['']">
-            Skills
+            My Skills
           </h1>
-          <p className="text-center text-slate-900 lg:max-w-3xl">
-            Here are the skills that power my work, from creating responsive web
-            interfaces to building seamless mobile applications.
-          </p>
         </div>
-        <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-x-8">
-          <ProgressBar percentage={100} skill="HTML" />
-          <ProgressBar percentage={90} skill="CSS/SASS" />
-          <ProgressBar percentage={90} skill="JavaScript" />
-          <ProgressBar percentage={80} skill="React.js" />
-          <ProgressBar percentage={80} skill="Tailwind CSS" />
-          <ProgressBar percentage={70} skill="Typescript" />
-          <ProgressBar percentage={70} skill="Next.js" />
-          <ProgressBar percentage={70} skill="Astro" />
-          <ProgressBar percentage={60} skill="Node.js" />
-          <ProgressBar percentage={60} skill="Svelte.js" />
-          <ProgressBar percentage={50} skill="React Native" />
-          <ProgressBar percentage={50} skill="Flutter" />
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+          {skills.map((skill) => (
+            <div
+              key={skill}
+              className="rounded-sm bg-slate-900 px-4 py-3 text-center text-secondary-200 transition-colors duration-300 hover:bg-slate-800 hover:font-medium"
+            >
+              {skill}
+            </div>
+          ))}
         </div>
       </AnimatedSection>
     </main>

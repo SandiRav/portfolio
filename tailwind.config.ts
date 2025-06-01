@@ -36,7 +36,7 @@ export default {
       },
 
       fontFamily: {
-        sans: "var(--font-inter)",
+        Rroboto: ["var(--font-roboto)", "Arial", "sans-serif"],
       },
       animation: {
         float: "float 6s ease-in-out infinite",

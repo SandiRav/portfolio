@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  IconBrandFacebookFilled,
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
   IconMenu2,
@@ -69,13 +68,18 @@ const Header = () => {
 
           <div className="flex gap-x-5">
             <div className="flex items-center justify-center gap-x-5">
-              <Link href="https://twitter.com">
-                <IconBrandFacebookFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
-              </Link>
-              <Link href="https://twitter.com">
+              <Link
+                href="https://github.com/SandiRav"
+                target="_blank"
+                className="rounded-full border border-gray-700 p-2"
+              >
                 <IconBrandGithubFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
               </Link>
-              <Link href="https://twitter.com">
+              <Link
+                href="https://www.linkedin.com/in/ary-r-54a20a324/"
+                target="_blank"
+                className="rounded-full border border-gray-700 p-2"
+              >
                 <IconBrandLinkedinFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
               </Link>
             </div>

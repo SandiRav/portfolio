@@ -5,7 +5,6 @@ export interface Project {
   img: string;
   tags: string[];
   demo: string;
-  source: string;
   imageAltText: string;
 }
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import React, { memo } from "react";
 
 interface FadeInWhenVisibleProps {
   children: React.ReactNode;
@@ -49,4 +50,4 @@ const FadeInWhenVisible: React.FC<FadeInWhenVisibleProps> = ({
   );
 };
 
-export default FadeInWhenVisible;
+export default memo(FadeInWhenVisible);

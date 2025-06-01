@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
+import "./globals.css";
 
-const inter = Inter({
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
   title: "Raveloarisoa Sandrinah Portfolio",
   description:
-    "I am a front-end developer from Madagascar with 2 years of experience contributing remotely to building web applications for companies in Europe and the US.",
+    "I am a front-end developer from Madagascar with 3 years of experience contributing remotely to building web applications for companies in Europe and the US.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -22,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="bg-white">
+    <html lang="en" className={`${roboto.variable}`}>
+      <body className="font-Roboto bg-white">
         <Header />
         <main>{children}</main>
         <Footer />

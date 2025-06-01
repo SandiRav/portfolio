@@ -1,5 +1,4 @@
 import {
-  IconBrandFacebookFilled,
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
 } from "@tabler/icons-react";
@@ -8,33 +7,20 @@ import Link from "next/link";
 export const Footer = () => {
   return (
     <footer className="bg-primary-300 py-10 shadow-xl">
-      <div className="text-center">
-        <p className="text-center text-sm text-slate-900">
-          © <span>Copyright</span> <strong>Kelly</strong>{" "}
-          <span>
-            All Rights Reserved
-            <br />
-          </span>
-        </p>
-      </div>
       <div className="mt-5 flex justify-center gap-x-5">
         <Link
-          href="https://twitter.com"
-          className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
+          href="https://github.com/SandiRav"
+          target="_blank"
+          className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-6"
         >
-          <IconBrandFacebookFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
+          <IconBrandGithubFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
         </Link>
         <Link
-          href="https://twitter.com"
-          className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
+          href="https://www.linkedin.com/in/ary-r-54a20a324/"
+          target="_blank"
+          className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-6"
         >
-          <IconBrandGithubFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
-        </Link>
-        <Link
-          href="https://twitter.com"
-          className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-2"
-        >
-          <IconBrandLinkedinFilled className="hover:text-secondary-200 h-6 w-4 shrink-0 text-gray-700/50" />
+          <IconBrandLinkedinFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
         </Link>
       </div>
     </footer>
