@@ -1,28 +1,31 @@
 import Image from "next/image";
 import AnimatedSection from "../components/AnimatedSection";
 import { IconArrowBadgeRightFilled } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
+import { LoadingSpinner } from "../components/LoadingSpinner";
+
+const skills = [
+  "HTML",
+  "CSS",
+  "SASS",
+  "Tailwind CSS",
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Svelte.js",
+  "Astro.js",
+  "Node.js",
+  "Express.js",
+  "React Native",
+  "MongoDB",
+  "REST API",
+  "Git",
+  "Stripe API",
+  "Figma",
+];
 
 export default function Home() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Tailwind CSS",
-    "JavaScript",
-    "TypeScript",
-    "React.js",
-    "Next.js",
-    "Svelte.js",
-    "Astro.js",
-    "Node.js",
-    "Express.js",
-    "React Native",
-    "MongoDB",
-    "REST API",
-    "Git",
-    "Stripe API",
-    "Figma",
-  ];
   return (
     <main className="px-5 sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
       <AnimatedSection>

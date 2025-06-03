@@ -1,11 +1,11 @@
 "use client";
-
 import React from "react";
 import { FormEvent, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { IconPhone, IconMail, IconMapPin } from "@tabler/icons-react";
 import AnimatedSection from "../components/AnimatedSection";
+import { LoadingSpinner } from "../components/LoadingSpinner";
 
 const LeafletMap = dynamic(() => import("../components/LeafletMap"), {
   ssr: false,
@@ -38,7 +38,6 @@ const ContactForm = React.memo(
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     ) => {
       const { name, value } = e.target;
-      console.log("input", name, value);
       setFormData((prev: FormData) => ({ ...prev, [name]: value }));
     };
 
@@ -184,6 +183,7 @@ const ContactInfo = React.memo(() => (
 ContactInfo.displayName = "ContactInfo";
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -211,7 +211,6 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      // Check if the response is JSON
       const contentType = response.headers.get("content-type");
       let data;
 
@@ -242,12 +241,19 @@ export default function Contact() {
     if (submitStatus.success || submitStatus.error) {
       const timer = setTimeout(() => {
         setSubmitStatus({ success: false, error: null });
-      }, 5000); // 5 seconds
+      }, 5000);
 
-      // Cleanup timeout if component unmounts or status changes
       return () => clearTimeout(timer);
     }
   }, [submitStatus.success, submitStatus.error]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Render form status notifications separated from the form itself
   const FormStatusNotifications = React.memo(() => (
@@ -268,12 +274,16 @@ export default function Contact() {
 
   FormStatusNotifications.displayName = "FormStatusNotifications";
 
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <main className="px-5 py-14 font-sans sm:mx-auto sm:max-w-136 lg:max-w-240 xl:max-w-screen-xl">
       <AnimatedSection>
         <ContactHeader />
         <div className="lg:flex lg:gap-x-8">
-          <AnimatedSection className="border border-slate-200 p-5 shadow-custom lg:w-2/5">
+          <AnimatedSection className="border border-slate-200 bg-white p-5 shadow-custom lg:w-2/5">
             <ContactInfo />
             <LeafletMap
               center={[-18.17012567569023, 49.37523040087744]}
@@ -283,9 +293,8 @@ export default function Contact() {
             />
           </AnimatedSection>
 
-          <div className="mt-8 border border-slate-200 shadow-custom lg:mt-0 lg:w-3/5">
+          <div className="mt-8 border border-slate-200 bg-white shadow-custom lg:mt-0 lg:w-3/5">
             <FormStatusNotifications />
-
             <ContactForm
               formData={formData}
               setFormData={setFormData}

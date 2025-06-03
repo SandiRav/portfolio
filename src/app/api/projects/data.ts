@@ -45,10 +45,10 @@ export const projects: Project[] = [
     title: "Online Bus Booking Platform - Personal Project",
     id: "bus-booking",
     description:
-      "This project is a web-based bus ticket booking system developed with a teammate. I focused on frontend UI development using Tailwind CSS, implemented real-time seat selection, and integrated Stripe for secure online payments. The platform also supports user authentication and booking management.",
-    img: "/assets/images/allsafe-products-page.png",
+      "Safe Trip is a web-based bus ticket booking system developed with a teammate. I focused on frontend UI development using Tailwind CSS, implemented real-time seat selection, and integrated Stripe for secure online payments. The platform also supports user authentication and booking management.",
+    img: "/assets/images/safe-trip.png",
     tags: ["React.js", "Astro.js", "Tailwind CSS", "Stripe"],
-    demo: "https://www.allsafe24.com/",
+    demo: "https://ary-safetrip.netlify.app/",
     imageAltText: "Bus booking system image screenshot",
   },
 ];
