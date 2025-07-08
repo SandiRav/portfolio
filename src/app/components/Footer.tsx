@@ -16,7 +16,7 @@ export const Footer = () => {
           <IconBrandGithubFilled className="size-6 shrink-0 text-gray-700/50 hover:text-secondary-200" />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/ary-r-54a20a324/"
+          href="https://mg.linkedin.com/in/sandy-raveloarisoa-804620221"
           target="_blank"
           className="flex size-8 items-center justify-center rounded-full border border-gray-700 p-6"
         >
