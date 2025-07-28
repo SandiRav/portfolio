@@ -18,7 +18,7 @@ export default function Home() {
             if you would like to work together.
           </p>
           <Link
-            href="/projects"
+            href="/work"
             className="text-semibold rounded-custom-50 bg-secondary-200 px-10 py-3 text-sm uppercase text-white"
           >
             Work
